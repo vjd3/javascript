@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
 </head>
 <body>
-    <h1>DOM</h1>
-   
-    <h1>DOM Selectors</h1>
+    <!-- <h1>DOM Selectors</h1>
     <div id="hello">Hello, World</div>
     <div>Hi there</div>
 
@@ -22,6 +26,43 @@
     <script>
         console.log(document.getElementById('hello'));
         console.log(document.getElementsByClassName('item'));
+    </script> -->
+
+    <!-- <button id="btn">Click Me</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', function() {
+        })
+        document.getElementById('btn').addEventListener('click', function() {
+            document.getElementById('btn').style.backgroundColor = 'red';
+            document.getElementById('btn').style.color = 'white';
+            document.getElementById('btn').style.padding = '10px';
+            document.getElementById('btn').style.fontSize = '20px';
+            document.getElementById('btn').style.borderRadius = '5px';
+            document.getElementById('btn').style.border = 'none';
+            document.getElementById('btn').style.cursor = 'pointer';
+            document.getElementById('btn').style.transition = 'all 0.3s ease';
+
+        })
+    </script> -->
+
+    <h1>ToDo List</h1>
+    <ul>
+        <li>Buy groceries</li>
+        <li>Do laundry</li>
+        <li>Wash car</li>
+    </ul>
+
+    <script>
+        const list = document.querySelectorAll('li');
+        
+        list.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('completed');
+            })
+        })
     </script>
 </body>
 </html>
